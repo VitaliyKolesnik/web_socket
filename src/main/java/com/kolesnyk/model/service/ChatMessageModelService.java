@@ -2,6 +2,7 @@ package com.kolesnyk.model.service;
 
 import com.kolesnyk.model.entity.ChatMessageModel;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -11,5 +12,5 @@ public interface ChatMessageModelService {
 
     ChatMessageModel get (UUID uuid);
 
-    List getAll();
+    List<String> getAll();
 }

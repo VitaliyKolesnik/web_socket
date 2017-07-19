@@ -3,6 +3,8 @@ package com.kolesnyk.model.dao;
 
 import com.kolesnyk.model.entity.ChatMessageModel;
 
+
+import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
@@ -12,5 +14,5 @@ public interface ChatMessageModelDAO {
 
     ChatMessageModel get(UUID uuid);
 
-    List getAll();
+    List<ChatMessageModel> getAll();
 }

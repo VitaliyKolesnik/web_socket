@@ -18,23 +18,23 @@ public class ChatMessageModel {
     private UUID id;
     @Column(name = "TEXT")
     private String text;
-    @Column(name = "AUTHOR")
-    private String author;
+//    @Column(name = "AUTHOR")
+//    private String author;
     @Column(name = "DATE")
     private Date createDate;
 
     public ChatMessageModel() {
     }
 
-    public ChatMessageModel(String text, String author, Date createDate) {
+    public ChatMessageModel(String text, Date createDate) {
         this.text = text;
-        this.author = author;
+//        this.author = author;
         this.createDate = createDate;
     }
 
     public ChatMessageModel(Parameters parameters){
         this.text = parameters.text;
-        this.author = parameters.author;
+//        this.author = parameters.author;
         this.createDate = parameters.createDate;
     }
 
@@ -54,13 +54,13 @@ public class ChatMessageModel {
         this.text = text;
     }
 
-    public String getAuthor() {
-        return author;
-    }
+//    public String getAuthor() {
+//        return author;
+//    }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+//    public void setAuthor(String author) {
+//        this.author = author;
+//    }
 
     public Date getCreateDate() {
         return createDate;
@@ -75,7 +75,7 @@ public class ChatMessageModel {
         final StringBuilder sb = new StringBuilder("ChatMessageModel{");
         sb.append("id='").append(id).append('\'');
         sb.append(", text='").append(text).append('\'');
-        sb.append(", author='").append(author).append('\'');
+//        sb.append(", author='").append(author).append('\'');
         sb.append(", createDate=").append(createDate);
         sb.append('}');
         return sb.toString();

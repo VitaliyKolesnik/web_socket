@@ -1,5 +1,6 @@
 package com.kolesnyk.config;
 
+import com.kolesnyk.controller.SocketHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.WebSocketHandler;
@@ -20,7 +21,7 @@ public class WebSocketConfig implements WebSocketConfigurer{
 
     @Bean
     public WebSocketHandler myHandler(){
-        return new TextWebSocketHandler();
+        return new SocketHandler();
     }
 
     @Bean
