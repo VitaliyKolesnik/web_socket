@@ -6,6 +6,7 @@ import org.springframework.web.socket.WebSocketHandler;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+import org.springframework.web.socket.handler.TextWebSocketHandler;
 import org.springframework.web.socket.server.standard.ServletServerContainerFactoryBean;
 
 @Configuration
@@ -14,12 +15,12 @@ public class WebSocketConfig implements WebSocketConfigurer{
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
-        webSocketHandlerRegistry.addHandler(myHandler(), "/myHandler").setAllowedOrigins("*");
+        webSocketHandlerRegistry.addHandler(myHandler(), "/socket").setAllowedOrigins("*");
     }
 
     @Bean
     public WebSocketHandler myHandler(){
-        return new MyHandler();
+        return new TextWebSocketHandler();
     }
 
     @Bean

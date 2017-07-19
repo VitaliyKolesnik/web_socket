@@ -1,7 +1,6 @@
 package com.kolesnyk.controller;
 
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -23,4 +22,6 @@ public class SocketHandler extends TextWebSocketHandler {
     public void handleTransportError(WebSocketSession session, Throwable exception) throws Exception {
         exception.printStackTrace();
     }
+
+
 }
